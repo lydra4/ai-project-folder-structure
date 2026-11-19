@@ -29,5 +29,14 @@
     "files.trimTrailingWhitespace": true,
     "[makefile]": {
         "editor.insertSpaces": false
+    },
+    "python.analysis.extraPaths": [
+        "src"
+    ],
+    "workbench.editorAssociations": {
+        "*.md": "vscode.markdown.preview.editor"
+    },
+    "[markdown]": {
+        "files.autoSave": "afterDelay"
     }
 }
