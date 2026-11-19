@@ -5,6 +5,7 @@
         "ms-python.vscode-pylance",
         "ms-python.mypy-type-checker",
         "imagirom.hydralance",
-        "redhat.vscode-yaml"
+        "redhat.vscode-yaml",
+        "bierner.markdown-preview-github-styles"
     ]
 }

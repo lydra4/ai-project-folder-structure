@@ -11,6 +11,7 @@ if command -v code &> /dev/null; then
         "ms-python.mypy-type-checker"
         "imagirom.hydralance"
         "redhat.vscode-yaml"
+        "bierner.markdown-preview-github-styles"
     )
 
     for ext in "${extensions[@]}"; do
