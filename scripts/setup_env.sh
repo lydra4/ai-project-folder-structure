@@ -6,7 +6,7 @@ set +u
 eval "$(conda shell.bash hook)"
 set -u
 
-echo "🚀 Creating environment from env.yaml using conda (libmamba)..."
+echo "🚀 Creating environment from env.yaml using conda"
 conda env create -f env.yaml -y
 echo "✅ Environment created."
 
@@ -19,6 +19,14 @@ set -u
 
 echo "🔌 Installing VS Code extensions..."
 bash "$(dirname "$0")/install_extensions.sh" || echo "⚠️  Extension install failed; continue and install them from the VS Code UI."
+
+echo "🤖 Installing Claude Code CLI..."
+if command -v claude &> /dev/null; then
+    echo "  ✓ Claude Code already installed"
+else
+    curl -fsSL https://claude.ai/install.sh | bash \
+        || echo "⚠️  Claude Code install failed; install it manually."
+fi
 
 echo "🛠️ Setting up pre-commit..."
 pre-commit install
