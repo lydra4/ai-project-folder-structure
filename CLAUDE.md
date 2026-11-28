@@ -1,3 +1,23 @@
+## Project
+
+<!-- Update: one-line description of what this project does -->
+Config via Hydra, environment via conda (`env.yaml`).
+
+## Commands
+
+- `make setup` / `make remove`: create / delete the conda environment
+- `make test`: pytest with coverage
+- `make check`: pre-commit (ruff, mypy, yaml/json checks, gitleaks, nbstripout)
+- `make build` / `make run`: Docker image / container (port 7860)
+
+## Layout
+
+- `src/`: source code; `tests/`: tests mirroring `src/` (`tests/test_<module>.py`)
+- `config/`: Hydra configs and `logging.yaml`
+- `data/01-raw` → `02-preprocessed` → `03-processed`: never modify `01-raw`
+- `notebooks/`: experiments only; reusable code belongs in `src/`
+- `.env.example` lists required variables; never read `.env`
+
 ## Communication
 
 - Explain complex concepts simply: plain language first, then an analogy or small example, and define jargon on first use.
